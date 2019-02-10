@@ -56,13 +56,7 @@ function loadManagerOptions(products) {
     });
 }
 
-function loadLowInventory() {
-  connection.query("SELECT * FROM products WHERE stock_quantity <= 5", function(err, res) {
-    if (err) throw err;
-    console.table(res);
-    loadManagerMenu();
-  });
-}
+
 
 function addToInventory(inventory) {
   console.table(inventory);
